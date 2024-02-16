@@ -1,17 +1,442 @@
-/* Error: Expected expression.
- *     ,
- * 328 |   font-weight: <weight>;
- *     |                ^
- *     '
- *   scss\style.scss 328:16  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a     \2577 \a 328 \2502    font-weight: <weight>;\d\a     \2502                 ^\a     \2575 \a   scss\\style.scss 328:16  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Open Sans, sans-serif;
 }
+
+body {
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+  border-right-style: solid;
+  border-color: slategrey;
+  padding-right: 2px;
+}
+
+/* header*/
+header {
+  position: static;
+  top: 0px;
+  padding: 0 2rem;
+  background-image: url(https://images.unsplash.com/photo-1575980202155-18b6c1e49169?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-color: #14080E;
+}
+
+.navbar {
+  width: 100%;
+  height: 125px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar a {
+  text-decoration: none;
+  color: #c7f9cc;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.navbar a:hover {
+  color: #38a3a5;
+}
+.navbar .logo {
+  gap: 2px;
+  display: flex;
+}
+.navbar .logo img {
+  width: 70px;
+  padding-top: 1.5rem;
+}
+.navbar .logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Comfortaa", sans-serif;
+  padding-top: 2.5rem;
+}
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 20px;
+}
+.navbar .toggle_btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.navbar .action_btn {
+  background: #E6AA68;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+.navbar .action_btn:hover {
+  scale: 1.05;
+  color: #EEE5E9;
+}
+.navbar .action_btn:active {
+  scale: 0.95;
+}
+.navbar a:hover {
+  color: #38a3a5;
+}
+
+/*Dropdown Menu*/
+.dropdown_menu {
+  display: none;
+  background-image: url(https://images.unsplash.com/photo-1575980202155-18b6c1e49169?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0%;
+  width: 300px;
+  background: #005e7c;
+  border-style: double;
+  border-width: 0;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 3vh;
+}
+.dropdown_menu.open {
+  height: 240px;
+  border-width: 2px;
+}
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown_menu li a {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #E6AA68;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+/*Main Index*/
+@font-face {
+  font-family: Fuente Titulo;
+  src: url(../fonts/OpenSans_Condensed-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: parrafo;
+  src: url(../fonts/LTBinaryNeue.ttf);
+}
+main {
+  background-image: url(../image/background\ main.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+}
+.titulo img {
+  width: 100px;
+}
+.titulo h1 {
+  font-size: 5rem;
+}
+.titulo .marine {
+  color: aqua;
+  font-family: "Comfortaa", sans-serif;
+}
+.titulo .life {
+  color: #c7f9cc;
+  font-family: Fuente Titulo;
+}
+
+.presentacion {
+  display: grid;
+  grid-template-areas: "titulo foto" "texto foto";
+  justify-content: space-between;
+}
+.presentacion h2 {
+  grid-area: titulo;
+  text-align: center;
+  font-size: 3rem;
+  border-bottom-style: double;
+}
+.presentacion p {
+  grid-area: texto;
+  margin: 5px;
+  font-family: parrafo;
+}
+.presentacion img {
+  grid-area: foto;
+  border-radius: 2vh;
+}
+
+.agua_dulce {
+  display: grid;
+  grid-template-areas: "foto1 titulo1" "foto1 texto1";
+}
+.agua_dulce img {
+  grid-area: foto1;
+}
+.agua_dulce h2 {
+  grid-area: titulo1;
+  text-align: center;
+  font-size: 3rem;
+  border-bottom-style: double;
+  align-self: center;
+}
+.agua_dulce p {
+  grid-area: texto1;
+  text-align: center;
+  font-family: parrafo;
+}
+
+.marinos {
+  display: grid;
+  grid-template-areas: "titulo2 foto2" "texto2 foto2";
+  border-top-style: ridge;
+}
+.marinos h2 {
+  text-align: center;
+  grid-area: titulo2;
+  border-bottom-style: double;
+  align-self: center;
+  font-size: 3rem;
+}
+.marinos p {
+  grid-area: texto2;
+  font-family: parrafo;
+}
+.marinos img {
+  grid-area: foto2;
+  width: 500px;
+}
+
+/*Galeria de fotos*/
+.galeria {
+  margin-bottom: 2rem;
+  height: 840px;
+  display: grid;
+  grid-template-areas: "tituloGaleria" "fotoGaleria";
+}
+.galeria h1 {
+  text-align: center;
+  font-family: footer;
+  font-size: 5rem;
+  color: steelblue;
+  grid-area: tituloGaleria;
+}
+.galeria .imagenes {
+  display: flex;
+  height: 700px;
+  grid-area: fotoGaleria;
+  text-align: center;
+}
+.galeria .imagenes img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  transition: 2s ease;
+  grid-area: fotoGaleria;
+}
+.galeria .imagenes img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/*contacto*/
+.contactanos {
+  font-family: Quicksand;
+  background: rgb(253, 207, 243);
+  background: radial-gradient(circle, rgb(253, 207, 243) 32%, rgb(61, 124, 119) 100%, rgb(56, 163, 165) 100%);
+}
+
+/*Footer*/
+@font-face {
+  font-family: footer;
+  src: url(../fonts/CaviarDreams.ttf);
+}
+footer {
+  background-image: url(../image/background\ footer.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 0.5rem;
+  border-top-style: double;
+}
+
+.pie {
+  display: flex;
+  height: 125px;
+}
+
+.contacto {
+  border-right-style: double;
+}
+.contacto h2 {
+  text-align: center;
+  font-family: footer;
+}
+.contacto .telefono {
+  display: flex;
+}
+.contacto .telefono img {
+  width: 30px;
+}
+.contacto .telefono p {
+  font-family: parrafo;
+}
+
+.contacto .mail {
+  display: flex;
+}
+.contacto .mail img {
+  width: 30px;
+}
+.contacto .mail p {
+  font-family: parrafo;
+}
+
+.redes {
+  border-right-style: double;
+}
+.redes h2 {
+  font-family: footer;
+  text-align: center;
+}
+.redes .facebook {
+  display: flex;
+  align-items: center;
+}
+.redes .facebook img {
+  width: 30px;
+}
+.redes .facebook p a {
+  font-family: "Comfortaa", sans-serif;
+  text-decoration: none;
+  align-self: center;
+  color: #14080E;
+  margin-left: 20px;
+}
+.redes .facebook p:hover {
+  scale: 1.03;
+}
+.redes .instagram {
+  display: flex;
+  align-items: center;
+}
+.redes .instagram img {
+  width: 30px;
+}
+.redes .instagram p a {
+  font-family: "Comfortaa", sans-serif;
+  text-decoration: none;
+  color: #14080E;
+  text-align: center;
+  margin-left: 20px;
+}
+.redes .instagram p:hover {
+  scale: 1.03;
+}
+
+.ubicacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ubicacion .titulo_ubicacion {
+  display: flex;
+  justify-content: center;
+}
+.ubicacion .titulo_ubicacion img {
+  width: 40px;
+}
+.ubicacion .titulo_ubicacion h2 {
+  text-align: center;
+  font-family: footer;
+}
+.ubicacion .padre_mapa {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+.ubicacion .padre_mapa .mapa {
+  height: 115px;
+}
+
+/*resposive designs*/
+@media (max-width: 992px) {
+  header {
+    position: static;
+  }
+  .navbar .links, .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+  .titulo img {
+    width: 75px;
+  }
+  .titulo h1 {
+    font-size: 2rem;
+  }
+  .presentacion img, .agua_dulce img, .marinos img {
+    width: 200px;
+  }
+  .presentacion h2, .agua_dulce h2, .marinos h2 {
+    font-size: 16px;
+  }
+  .presentacion p, .agua_dulce p, .marinos p {
+    font-size: 10px;
+  }
+  /*Footer responsive*/
+  .pie {
+    display: block;
+    height: auto;
+  }
+  .contacto, .redes, .ubicacion {
+    display: inline;
+    width: 100%;
+    border-style: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
