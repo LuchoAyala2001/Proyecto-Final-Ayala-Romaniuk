@@ -53,14 +53,14 @@
         </div>
 
     </header>
-    <main>
-        <div class="container contactanos">
+    <main class="main_contacto">
+        <div class="container-fluid contactanos">
             <h1>Contactanos</h1>
-            <div class="contacto_informacion">
+            <div class="contacto_informacion col-10 col-sm-12">
                 <div class="datos">
-                    <h2>Tus <span>datos</span></h2>
-                    <form action=""> 
-                        <p>
+                    <h2>Tus <span>Datos</span></h2>
+                    <form> 
+                        <p >
                             <label for="Nombre_completo">Nombre completo</label>
                             <input type="text" name="Nombre Completo" id="Nombre_completo">
                         </p>
@@ -68,17 +68,19 @@
                             <label for="email"> Correo Electronico</label>
                             <input type="email" name="email" id="email">
                         </p>
+                        <p class="textp">
                         <label for="tel">Telefono</label>
                         <input type="tel" name="tel" id="tel">
+                        </p>
                         <p>
                             <label for="asunto"> Asunto </label>
                             <input type="text" name="asunto" id="asunto">
                         </p>
-                        <p>
+                        <p class="texto">
                             <label for="mensaje">Mensaje</label>
                             <textarea name="Mensaje" rows="3"></textarea>
                         </p>
-                        <p>
+                        <p class="texto">
                             <button type="submit">Enviar</button>
                         </p>
                     </form>

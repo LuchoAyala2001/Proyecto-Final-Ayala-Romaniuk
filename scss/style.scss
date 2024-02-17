@@ -1,3 +1,25 @@
+@font-face {
+  font-family: Fuente Titulo;
+  src: url(../fonts/OpenSans_Condensed-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: parrafo;
+  src: url(../fonts/LTBinaryNeue.ttf);
+}
+@font-face {
+  font-family: footer;
+  src: url(../fonts/CaviarDreams.ttf);
+}
+@font-face {
+  font-family: contact;
+  src: url(../fonts/Quicksand_Dash.otf);
+}
+@font-face {
+  font-family: contactp;
+  src: url(../fonts/Quicksand_Bold.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -163,15 +185,7 @@
     }
   }
   /*Main Index*/
-  @font-face {
-    font-family: Fuente Titulo;
-    src: url(../fonts/OpenSans_Condensed-ExtraBoldItalic.ttf);
-  }
   
-  @font-face {
-    font-family: parrafo;
-    src: url(../fonts/LTBinaryNeue.ttf);
-  }
   
   main {
     background-image: url(../image/background\ main.jpg);
@@ -319,20 +333,86 @@
     }
   }
   /*contacto*/
-
+  .main_contacto{
+    background-image: none;
+    background-color: #EEE5E9;
+  }
 .contactanos{
-    font-family:Quicksand ;
-    background: rgb(253,207,243);
-    background: radial-gradient(circle, rgba(253,207,243,1) 32%, rgba(61,124,119,1) 100%, rgba(56,163,165,1) 100%);
+    background-color: #2A2B2A;
+    color: #c7f9cc;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    max-width: 1170px;
+    display: inline;
+    
+    
+       h1{
+      font-family: contact;
+      text-align: center;
+      font-size: 3em;
+
+    }
+    .contacto_informacion{
+      box-shadow: 0 0 20px 0 #c6ddf0;
+      .datos{
+        padding-left: 20px;
+        background-color: #222222;
+        h2{
+          font-family: contactp;
+          color: #38a3a5;
+          text-align: center;
+          span{
+            font-family: contact;
+            color: #E6AA68;
+          }
+        }
+          form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .texto{
+              grid-column: 1 / 3;
+            }
+            p{
+              margin: 0;
+              padding: 1em;
+              label{
+                font-family: contactp;
+              }
+              button{
+                width: 100%;
+                padding: 1em;
+                background: #CB8589;
+
+              }
+
+              input{
+                width: 100%;
+                border: none;
+                padding: 1em;
+                background: none;
+                border-bottom: 1px solid #CB8589;
+                
+              }
+              textarea{
+                width: 100%;
+                border: none;
+                padding: 1em;
+                background: none;
+                border-bottom: 1p solid #CB8589;
+              }
+            }
+          }        
+      }
+      .informacion{
+        background-color: #4D6CFA;
+      }
+    }
+
   }
   
   /*Footer*/
-@font-face {
-    font-family: footer;
-    src: url(../fonts/CaviarDreams.ttf);
-  }
-  
-  footer {
+    footer {
     background-image: url(../image/background\ footer.jpg);
     background-size: cover;
     background-position: center;
