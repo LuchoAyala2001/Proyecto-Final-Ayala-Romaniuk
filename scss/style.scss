@@ -150,7 +150,7 @@
 
     &.open{
         height: 240px;
-        border-width: 2px;
+        border-width: 5px;
     }
 
     li {
@@ -188,10 +188,7 @@
   
   
   main {
-    background-image: url(../image/background\ main.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #EEE5E9; 
     display: flex;
     flex-wrap: wrap;
   }
@@ -333,10 +330,7 @@
     }
   }
   /*contacto*/
-  .main_contacto{
-    background-image: none;
-    background-color: #EEE5E9;
-  }
+
 .contactanos{
     background-color: #2A2B2A;
     color: #c7f9cc;
@@ -344,7 +338,7 @@
     margin-right: auto;
     padding: 1.5em;
     max-width: 1170px;
-    display: inline;
+
     
     
        h1{
@@ -355,6 +349,9 @@
     }
     .contacto_informacion{
       box-shadow: 0 0 20px 0 #c6ddf0;
+      .contacto_informacion > * {
+        padding: 1em;
+      }
       .datos{
         padding-left: 20px;
         background-color: #222222;
@@ -392,6 +389,7 @@
                 padding: 1em;
                 background: none;
                 border-bottom: 1px solid #CB8589;
+                color: #c6ddf0;
                 
               }
               textarea{
@@ -400,12 +398,30 @@
                 padding: 1em;
                 background: none;
                 border-bottom: 1p solid #CB8589;
+                color: #c6ddf0;
               }
             }
           }        
       }
       .informacion{
         background-color: #4D6CFA;
+        h3{
+          text-align: center;
+          margin: 0 0 1rem 0;
+        }
+        ul{
+          text-align: center;
+          margin: 0 0 1rem 0;
+          list-style: none;
+          padding: 0;
+          li{
+            padding: 0.3em;
+          }
+        }
+        p{
+          text-align: center;
+          margin: 0 0 1rem 0;
+        }
       }
     }
 
@@ -595,6 +611,34 @@
       display: inline;
       width: 100%;
       border-style: none;
+    }
+  }
+  @media (min-width: 700px) {
+    .contactanos{
+      .contacto_informacion{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+      }
+      .contacto_informacion > *{
+        padding: 2em;
+      }
+      .contacto_informacion > *{
+        padding: 2em;
+      }
+      .informacion{
+        h3{
+          text-align: left;
+          padding: 1em;
+        }
+        ul{
+          text-align: left;
+          padding: 1em;
+        }
+        p{
+          text-align: left;
+          padding: 1em;
+        }
+      }
     }
   }
   
