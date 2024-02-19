@@ -92,7 +92,7 @@ header {
   padding-top: 2rem;
   padding-bottom: 20px;
 }
-.navbar .toggle_btn {
+.navbar .boton {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
@@ -121,8 +121,8 @@ header {
   color: #38a3a5;
 }
 
-/*Dropdown Menu*/
-.dropdown_menu {
+/*Barra de navacion*/
+.barra_navegacion {
   display: none;
   background-image: url(https://images.unsplash.com/photo-1575980202155-18b6c1e49169?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: cover;
@@ -132,34 +132,34 @@ header {
   top: 60px;
   height: 0%;
   width: 300px;
-  background: #EEE5E1;
+  background: #171D1C;
   border-style: double;
   border-width: 0;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 3vh;
 }
-.dropdown_menu.open {
+.barra_navegacion.open {
   height: 240px;
   border-width: 5px;
 }
-.dropdown_menu li {
+.barra_navegacion li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.dropdown_menu li a {
-  color: steelblue;
+.barra_navegacion li a {
+  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   text-decoration: none;
 }
-.dropdown_menu .action_btn {
+.barra_navegacion .action_btn {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: #E6AA68;
+  background: #16BAC5;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -490,10 +490,10 @@ footer {
   .navbar .links, .navbar .action_btn {
     display: none;
   }
-  .navbar .toggle_btn {
+  .navbar .boton {
     display: block;
   }
-  .dropdown_menu {
+  .barra_navegacion {
     display: block;
   }
   .titulo img {
