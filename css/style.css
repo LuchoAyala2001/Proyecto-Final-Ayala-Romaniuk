@@ -29,6 +29,12 @@ body {
   height: 100vh;
 }
 
+main {
+  background-color: #EEE5E9;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 li {
   list-style: none;
   border-right-style: solid;
@@ -126,7 +132,7 @@ header {
   top: 60px;
   height: 0%;
   width: 300px;
-  background: #005e7c;
+  background: #EEE5E1;
   border-style: double;
   border-width: 0;
   overflow: hidden;
@@ -144,7 +150,7 @@ header {
   justify-content: center;
 }
 .dropdown_menu li a {
-  color: white;
+  color: steelblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -165,13 +171,7 @@ header {
   transition: scale 0.2 ease;
 }
 
-/*Main Index*/
-main {
-  background-color: #EEE5E9;
-  display: flex;
-  flex-wrap: wrap;
-}
-
+/*Index*/
 .titulo {
   display: flex;
   justify-content: center;
@@ -292,9 +292,6 @@ main {
 .contactanos {
   background-color: #2A2B2A;
   color: #c7f9cc;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.5em;
   max-width: 1170px;
 }
 .contactanos h1 {

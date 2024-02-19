@@ -30,6 +30,11 @@
   body {
     height: 100vh;
   }
+  main {
+    background-color: #EEE5E9; 
+    display: flex;
+    flex-wrap: wrap;
+  }
   
   li {
     list-style: none;
@@ -95,7 +100,7 @@
       padding-bottom: 20px;
     }
   
-    .toggle_btn {
+    .boton {
       color: white;
       font-size: 1.5rem;
       cursor: pointer;
@@ -128,9 +133,9 @@
       color: #38a3a5;
     }
   }
-  /*Dropdown Menu*/
+  /*Barra de navacion*/
 
-.dropdown_menu {
+.barra_navegacion {
     display: none;
     background-image: url(https://images.unsplash.com/photo-1575980202155-18b6c1e49169?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
@@ -140,14 +145,12 @@
     top: 60px;
     height: 0%;
     width: 300px;
-    background: #005e7c;
+    background: #171D1C;
     border-style: double;
     border-width: 0;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-radius: 3vh;
-    
-
     &.open{
         height: 240px;
         border-width: 5px;
@@ -171,7 +174,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      background: #E6AA68;
+      background: #16BAC5;
       color: #fff;
       padding: 0.5rem 1rem;
       border: none;
@@ -184,15 +187,7 @@
   
     }
   }
-  /*Main Index*/
-  
-  
-  main {
-    background-color: #EEE5E9; 
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+  /*Index*/
   .titulo {
     display: flex;
     justify-content: center;
@@ -334,13 +329,7 @@
 .contactanos{
     background-color: #2A2B2A;
     color: #c7f9cc;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5em;
     max-width: 1170px;
-
-    
-    
        h1{
       font-family: contact;
       text-align: center;
@@ -567,12 +556,12 @@
         display: none;
       }
   
-      .toggle_btn {
+      .boton {
         display: block;
       }
     }
   
-    .dropdown_menu {
+    .barra_navegacion {
       display: block;
     }
   

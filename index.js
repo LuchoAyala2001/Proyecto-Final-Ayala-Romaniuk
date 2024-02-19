@@ -1,9 +1,9 @@
 
 
-const toggleBtn = document.querySelector('.toggle_btn');
-const toggleBtnIcon = document.querySelector('.toggle_btn i');
-const dropDownMenu = document.querySelector('.dropdown_menu');
+const boton = document.querySelector('.boton');
+const botonIcono = document.querySelector('.boton i');
+const barraNavegacion = document.querySelector('.barra_navegacion');
 
-toggleBtn.onclick = function() {
-    dropDownMenu.classList.toggle('open')
+boton.onclick = function() {
+    barraNavegacion.classList.toggle('open')
 }
