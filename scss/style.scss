@@ -36,12 +36,6 @@
     flex-wrap: wrap;
   }
   
-  li {
-    list-style: none;
-    border-right-style: solid;
-    border-color: slategrey;
-    padding-right: 2px;
-  }
   
   /* header*/
   
@@ -98,6 +92,13 @@
       gap: 2rem;
       padding-top: 2rem;
       padding-bottom: 20px;
+
+      li{
+        list-style: none;
+        border-right-style: solid;
+        border-color: slategrey;
+        padding-right: 2px;
+      }
     }
   
     .boton {
@@ -136,11 +137,7 @@
   /*Barra de navacion*/
 
 .barra_navegacion {
-    display: none;
-    background-image: url(https://images.unsplash.com/photo-1575980202155-18b6c1e49169?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
+  position:absolute;
     right: 2rem;
     top: 60px;
     height: 0%;
@@ -161,6 +158,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      list-style: none;
+      border-right-style: solid;
+      border-color: slategrey;
+      padding-right: 2px;
   
       a {
         color: white;
@@ -293,7 +294,6 @@
     "tituloGaleria"
     "fotoGaleria"
     ;
-  
     h1 {
       text-align: center;
       font-family: footer;
@@ -311,7 +311,7 @@
       width: 0px;
       flex-grow: 1;
       object-fit: cover;
-      transition: 2s ease;
+      transition: 0.5s ease;
       grid-area: fotoGaleria;
   
       &:hover {
@@ -325,9 +325,6 @@
     }
   }
   /*contacto*/
-.main_contacto{
-height: 700px;
-}
 .contactanos{
     background-color: #2A2B2A;
     color: #c7f9cc;
@@ -417,7 +414,92 @@ height: 700px;
     }
 
   }
-  
+  /*Informacion*/
+  .page_informacion{
+    .acuariofilia{
+      padding: 2rem;    
+      h1{
+        text-align: center;
+        font-family: parrafo;
+        color: #6BA292;       
+      }
+      p{
+        font-family: contactp;      
+      } 
+    }
+    .cuidados_marinos{
+       background-color: #A7754D;
+      padding: 2rem;
+      display: grid;
+      grid-template-areas: 
+      " titulo titulo"
+      " texto foto"   
+      ;
+      h2{
+        color: #01295F;
+        font-family: parrafo;
+        text-align: center;
+        grid-area: titulo;
+      }
+      ul{
+        li{
+        font-family: contactp;
+        grid-area: texto;
+        padding-bottom: 9px;
+        }
+      }
+      img{
+        grid-area: foto;
+        width: 600px;
+        align-self: center;
+        border-radius: 2vh;
+      }
+    }
+    .cuidados_adulce{
+
+      padding: 2rem;
+      display: grid;
+      grid-template-areas: 
+      "titulo titulo"
+      "foto texto"
+      ;
+      h2{
+        color: #01295F;
+        font-family: parrafo;
+        text-align: center;
+        grid-area: titulo;  
+      }
+      ul{
+        li{
+          font-family: contactp;
+          grid-area: texto;
+          padding-bottom: 9px;
+        }
+      }
+      img{
+        grid-area: foto;
+        align-self: center;
+      }
+    }
+    .cuidados{
+      background-color: #A7754D;
+      padding: 2rem;
+      h2{
+        color: #01295F;
+        text-align: center;
+        font-family: parrafo;
+      }
+      p{
+        font-family: contactp;
+      }
+      ol{
+        li{
+          font-family: contactp;
+          padding-bottom: 9px;
+        }
+      }
+    }
+  }
   /*Footer*/
     footer {
     background-image: url(../image/background\ footer.jpg);
@@ -425,6 +507,7 @@ height: 700px;
     background-position: center;
     padding-top: 0.5rem;
     border-top-style: double;
+    margin: 0;
   }
   
   .pie {
@@ -590,7 +673,22 @@ height: 700px;
         font-size: 10px;
       }
     }
-  
+    
+    .page_informacion{
+      font-size: 0.7rem;
+      .cuidados_marinos{
+
+        img{
+          width: 00px;
+        }
+      }
+      .cuidados_adulce{
+
+        img{
+          width: 200px;
+        }
+      }
+    }
     /*Footer responsive*/
   
     .pie {
