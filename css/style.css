@@ -289,9 +289,11 @@ header {
 
 /*contacto*/
 .contactanos {
+  margin: 20px auto;
   background-color: #2A2B2A;
   color: #c7f9cc;
   max-width: 1170px;
+  border-radius: 2vh;
 }
 .contactanos h1 {
   font-family: contact;
@@ -349,7 +351,7 @@ header {
   border: none;
   padding: 1em;
   background: none;
-  border-bottom: 1p solid #CB8589;
+  border-bottom: 1px solid #CB8589;
   color: #c6ddf0;
 }
 .contactanos .contacto_informacion .informacion {
@@ -443,6 +445,73 @@ header {
 .page_informacion .cuidados ol li {
   font-family: contactp;
   padding-bottom: 9px;
+}
+
+/*Produtos*/
+.titulo_producto {
+  justify-self: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 150px;
+}
+.titulo_producto h1 {
+  font-family: parrafo;
+}
+.titulo_producto i {
+  align-self: center;
+  font-size: 40px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+.productos .carrito {
+  border-radius: 10px;
+  margin: 30px;
+}
+.productos .carrito figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.productos .carrito figure img {
+  width: 270px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border-top-left-radius: 60px;
+  transition: 1s;
+}
+.productos .carrito .producto_precio {
+  padding: 25px;
+  gap: 5px;
+  text-align: center;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+}
+.productos .carrito .producto_precio .titulo_carrito {
+  color: #CB8589;
+  font-family: contactp;
+}
+.productos .carrito .producto_precio p {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.productos .carrito .producto_precio button {
+  border: none;
+  background-color: #cb8530;
+  color: #fff;
+}
+.productos .carrito:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.productos .carrito:hover img {
+  transform: scale(1.2);
 }
 
 /*Footer*/
@@ -592,6 +661,9 @@ footer {
   .page_informacion .cuidados_adulce img {
     width: 0px;
   }
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
   /*Footer responsive*/
   .pie {
     display: block;
@@ -601,6 +673,14 @@ footer {
     display: inline;
     width: 100%;
     border-style: none;
+  }
+}
+@media (max-width: 700px) {
+  .titulo_producto {
+    justify-content: space-evenly;
+  }
+  .productos {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 700px) {

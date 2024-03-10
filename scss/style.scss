@@ -152,7 +152,6 @@
         height: 280px;
         border-width: 5px;
     }
-
     li {
       padding: 0.7rem;
       display: flex;
@@ -162,7 +161,6 @@
       border-right-style: solid;
       border-color: slategrey;
       padding-right: 2px;
-  
       a {
         color: white;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -326,9 +324,11 @@
   }
   /*contacto*/
 .contactanos{
+    margin: 20px auto;
     background-color: #2A2B2A;
     color: #c7f9cc;
     max-width: 1170px;
+    border-radius: 2vh;
        h1{
       font-family: contact;
       text-align: center;
@@ -385,7 +385,7 @@
                 border: none;
                 padding: 1em;
                 background: none;
-                border-bottom: 1p solid #CB8589;
+                border-bottom: 1px solid #CB8589;
                 color: #c6ddf0;
               }
             }
@@ -497,6 +497,73 @@
           font-family: contactp;
           padding-bottom: 9px;
         }
+      }
+    }
+  }
+  /*Produtos*/
+  .titulo_producto{
+    justify-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    h1{
+      font-family: parrafo;
+    }
+    i{
+      align-self: center;
+      font-size: 40px;
+    }
+  }
+  .productos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    
+    .carrito{
+      border-radius: 10px;
+      margin: 30px;
+      figure{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img{
+          width: 270px ;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 10px;
+          border-top-left-radius: 60px;
+          transition: 1s;
+        }
+      }
+      .producto_precio{
+        padding: 25px;
+        gap: 5px;
+        text-align: center;
+        line-height: 2;
+        display: flex;
+        flex-direction: column;
+        .titulo_carrito{
+          color: #CB8589;
+          font-family: contactp;
+        }
+        p{
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        button{
+          border: none;
+          background-color: #cb8530;
+          color: #fff;
+        }
+      }
+      
+      &:hover{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+      }
+      &:hover img{
+        transform: scale(1.2);
       }
     }
   }
@@ -689,6 +756,9 @@
         }
       }
     }
+    .productos{
+      grid-template-columns: repeat(2,1fr);
+    }
     /*Footer responsive*/
   
     .pie {
@@ -700,6 +770,14 @@
       display: inline;
       width: 100%;
       border-style: none;
+    }
+  }
+  @media (max-width: 700px){
+    .titulo_producto{
+      justify-content: space-evenly;
+    }
+    .productos{
+      grid-template-columns: repeat(1,1fr);
     }
   }
   @media (min-width: 700px) {
