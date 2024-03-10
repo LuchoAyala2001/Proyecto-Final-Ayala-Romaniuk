@@ -780,6 +780,17 @@
       height: 530px;
       overflow-y: hidden;
     }
+
+    .contactanos{
+      .contacto_informacion{
+        .datos{
+          form{
+           display: flex;
+           flex-direction: column;
+          }
+        }
+      }
+    }
     .titulo_producto{
       justify-content: space-evenly;
     }
