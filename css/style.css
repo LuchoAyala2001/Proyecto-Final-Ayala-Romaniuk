@@ -135,7 +135,7 @@ header {
   border-radius: 3vh;
 }
 .barra_navegacion.open {
-  height: 240px;
+  height: 280px;
   border-width: 5px;
 }
 .barra_navegacion li {
