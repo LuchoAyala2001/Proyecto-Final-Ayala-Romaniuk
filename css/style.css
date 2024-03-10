@@ -178,6 +178,7 @@ header {
 }
 .titulo img {
   width: 100px;
+  align-self: center;
 }
 .titulo h1 {
   font-size: 5rem;
@@ -210,6 +211,7 @@ header {
 .presentacion img {
   grid-area: foto;
   border-radius: 2vh;
+  align-self: center;
 }
 
 .agua_dulce {
@@ -218,6 +220,7 @@ header {
 }
 .agua_dulce img {
   grid-area: foto1;
+  align-self: center;
 }
 .agua_dulce h2 {
   grid-area: titulo1;
@@ -251,6 +254,7 @@ header {
 .marinos img {
   grid-area: foto2;
   width: 500px;
+  align-self: center;
 }
 
 /*Galeria de fotos*/
@@ -676,6 +680,10 @@ footer {
   }
 }
 @media (max-width: 700px) {
+  .galeria {
+    height: 530px;
+    overflow-y: hidden;
+  }
   .titulo_producto {
     justify-content: space-evenly;
   }

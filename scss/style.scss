@@ -194,6 +194,7 @@
   
     img {
       width: 100px;
+      align-self: center;
     }
   
     h1 {
@@ -232,6 +233,7 @@
     img {
       grid-area: foto;
       border-radius: 2vh;
+      align-self: center;
     }
   }
   
@@ -241,6 +243,7 @@
   
     img {
       grid-area: foto1;
+      align-self: center;
     }
   
     h2 {
@@ -279,6 +282,7 @@
     img {
       grid-area: foto2;
       width: 500px;
+      align-self: center;
     }
   }
 
@@ -773,6 +777,10 @@
     }
   }
   @media (max-width: 700px){
+    .galeria{
+      height: 530px;
+      overflow-y: hidden;
+    }
     .titulo_producto{
       justify-content: space-evenly;
     }
